@@ -49,3 +49,51 @@ document.addEventListener('input', e => {
     });
   }
 });
+function actualizarCantidad(evento, cambio) {
+    evento.stopPropagation();
+
+    const contador = evento.target.parentElement;
+    const tarjeta = contador.closest(".contenedor-foto");
+
+    const spanCantidad = contador.querySelector(".cantidad");
+    const spanStock = tarjeta.querySelector(".stock");
+
+    let cantidad = Number(spanCantidad.textContent);
+    let stock = Number(spanStock.textContent);
+
+    // ➕ SUMAR
+    if (cambio === 1) {
+        cantidad++;
+        stock++;
+    }
+
+    // ➖ RESTAR
+    if (cambio === -1) {
+        if (cantidad === 0) return; // no permitir negativos
+
+        cantidad--;
+        stock--;
+    }
+
+    spanCantidad.textContent = cantidad;
+    spanStock.textContent = stock;
+}
+const CODIGO_SECRETO = "admin123";
+const URL_SECRETA = "https://jamb-mb.github.io/web-papeleria-cecytem/";
+
+const inputBuscador = document.getElementById("buscador");
+
+inputBuscador.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        const texto = inputBuscador.value.trim();
+
+        // 🔐 Código secreto
+        if (texto === CODIGO_SECRETO) {
+            window.location.href = URL_SECRETA;
+        }
+    }
+});
+if (texto === CODIGO_SECRETO) {
+    inputBuscador.value = "";
+    window.location.replace(URL_SECRETA);
+}
