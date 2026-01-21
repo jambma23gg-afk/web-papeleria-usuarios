@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">"
+    <title>Papeleria</title>
+</head>
+
+<body>
+    <center>
+        <h1>PAPELERIA JAMB</h1>
+    </center>
+    <div class="wrapper">
+        <div class="search">
+            <span class=" uil uil-search"></span>
+            <input placeholder="search" type="text" id="buscador">
+        </div>
+    </div>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="tijeras.png" alt="">
+                        <p class="descripcion">Tijeras de corte limpio</p>
+                        <p id="serie">945629</p>
+                        <span class="precio">$ 100</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="compas.png" alt="">
+                        <p class="descripcion">Compas profesional</p>
+                        <p id="serie">02423</p>
+                        <span class="precio">$ 99</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="lapiz.png" alt="">
+                        <p class="descripcion">Lapiz de grafito</p>
+                        <p id="serie">34209</p>
+                        <span class="precio">$ 15</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="libreta.png" alt="">
+                        <p class="descripcion">Libreta profesional</p>
+                        <p id="serie">34349</p>
+                        <span class="precio">$ 125</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="colores.png" alt="">
+                        <p class="descripcion">Colores prisma color</p>
+                        <p id="serie">03535</p>
+                        <span class="precio">$ 245</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="goma.png" alt="">
+                        <p class="descripcion">Goma de migajon</p>
+                        <p id="serie">23109</p>
+                        <span class="precio">$ 25</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="hojasblancas.png" alt="">
+                        <p class="descripcion">Paquete de hojas blancas tipo carta</p>
+                        <p id="serie">03209</p>
+                        <span class="precio">$ 155</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="hojascolor.png" alt="">
+                        <p class="descripcion">Paquete de hojas de color</p>
+                        <p id="serie">00329</p>
+                        <span class="precio">$ 175</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="pluma.png" alt="">
+                        <p class="descripcion">Pluma de gel</p>
+                        <p id="serie">0049</p>
+                        <span class="precio">$ 15</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="prit.png" alt="">
+                        <p class="descripcion">Tijeras de punta redonda</p>
+                        <p id="serie">0009</p>
+                        <span class="precio">$45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="goma.png" alt="">
+                        <p class="descripcion">Goma de migajon</p>
+                        <p id="serie">23109</p>
+                        <span class="precio">$ 25</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="hojasblancas.png" alt="">
+                        <p class="descripcion">Paquete de hojas blancas tipo carta</p>
+                        <p id="serie">03209</p>
+                        <span class="precio">$ 155</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="hojascolor.png" alt="">
+                        <p class="descripcion">Paquete de hojas de color</p>
+                        <p id="serie">00329</p>
+                        <span class="precio">$ 175</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="pluma.png" alt="">
+                        <p class="descripcion">Pluma de gel</p>
+                        <p id="serie">0049</p>
+                        <span class="precio">$ 15</span>
+                    </div>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="prit.png" alt="">
+                        <p class="descripcion">Tijeras de punta redonda</p>
+                        <p id="serie">0009</p>
+                        <span class="precio">$45</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Contenedor del item selecionado-->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="" alt="" id="img">
+                <h2 id="modelo">papeleria</h2>
+                <p id="descripcion">utileria</p>
+
+                <span class="precio" id="precio">$ 45</span>
+
+                <div class="fila">
+                    <div class="Existencias">
+                        <label for="">Existencias</label>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                    </div>
+                    <div class="boton-izquierda">
+                        <button>AGREGAR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.counter.dev/script.js" data-id="beaca700-3c53-43df-8cfd-22a1168bf070" data-utcoffset="-6"></script>
+</body>
+
+</html>

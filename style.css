@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+sans:wght@300;400;800&display=swap');
+
+h1 {
+    color: violet;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans';
+}
+
+.contenido {
+    max-width: 1200px;
+    width: 100%;
+    margin: 80px auto;
+    display: flex;
+}
+
+.mostrador {
+    width: 100%;
+    transition: .5% ease;
+}
+
+.mostrador .fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+}
+
+.mostrador .fila .item {
+    max-width: 210px;
+    padding: 30px;
+    height: auto;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3%;
+    background: rgb(178, 129, 221);
+}
+
+.mostrador .fila .item:hover {
+    background-color: #dad3d3;
+    animation: levitar 2s ease-in-out infinite;
+
+}
+
+.mostrador .fila .item img {
+    width: 60%;
+    margin: 30px 0;
+}
+
+.mostrador .fila .item .descripcion {
+    color: #ffaf8f;
+    font-weight: bold;
+}
+
+.mostrador .fila .item .precio {
+    color: #f5e50c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.seleccion {
+    transition: .5% ease;
+    opacity: 0;
+    width: 0;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: left;
+}
+
+.cerrar {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    cursor: pointer;
+    color: #f0ec00;
+}
+
+.info {
+    padding: 20px;
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.info img {
+    display: block;
+    margin: 5px;
+    width: 45%;
+    animation: levitar 2s ease-in-out infinite;
+}
+
+.info h2 {
+    color: #ebebeb;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.info .precio {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f8ed51;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.info .fila {
+    display: flex;
+    align-items: flex-end;
+}
+
+.info .fila label {
+    display: block;
+    margin-bottom: 30px;
+    margin-left: auto;
+}
+
+.info .fila select {
+    width: 100px;
+    font-size: 18px;
+    padding: 1px;
+    margin-right: 100px;
+}
+
+.info .fila .button {
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    color: #924fa3;
+    background-color: #f85151;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: rgb(6, 18, 39);
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    text-align: center;
+    width: 230px;
+}
+
+.search {
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.search:hover {
+    background: rgba(185, 184, 83, 0.15);
+}
+
+.search:hover input {
+    max-width: 180px;
+}
+
+.search input {
+    background: transparent;
+    border: 0;
+    max-width: 0;
+    padding: 0;
+    text-indent: 12px;
+    color: #f9f9f9;
+    font-size: 22px;
+    font-family: "poppins";
+    outline: none;
+    transition: 0.4s;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.375)
+}
+
+.search span {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background: #8f44fd;
+    border-radius: inherit;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.boton-izquierda {
+    text-align: left;
+}
+
+.filtro {
+    display: none;
+}
