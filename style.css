@@ -222,3 +222,44 @@ body {
 .filtro {
     display: none;
 }
+
+.item {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-foto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* IMPORTANTE */
+}
+
+/* CONTADOR */
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+
+    min-height: 32px; /* 🔥 reserva el espacio */
+}
+
+/* BOTONES */
+.contador button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #2c7be5;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.contador span {
+    min-width: 18px;
+    text-align: center;
+    font-size: 14px;
+}
